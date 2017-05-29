@@ -6,8 +6,8 @@
 - [wrapper](#wrapper)
   * [contains](#containsselector)
   * [destroy](#destroy)
-  * [dispatch](#dispatch)
-  * [didEmit](#didEmit)
+  * [dispatch](#dispatchevent)
+  * [didEmit](#didemit)
   * [find](#findselector)
   * [hasAttribute](#hasattributeattribute)
   * [hasClass](#hasclassclass)
@@ -110,8 +110,10 @@ Calls $destroy on vms
 ```js
 wrapper.destroy()
 ```
-### dispatch()
+### dispatch(event)
 Dispatches native event or custom event to wrapper elements or vms
+
+**event** - `String` name of event to be dispatched/emitted
 
 **comments** - should this be broken into two methods - dispatch and emit?
 
