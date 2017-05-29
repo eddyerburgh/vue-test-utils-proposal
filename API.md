@@ -1,5 +1,27 @@
 ## wrapper API
 
+### methods
+- [contains](#contains)
+- [destroy](#destroy)
+- [dispatch](#dispatch)
+- [didEmit](#didEmit)
+- [find](#find)
+- [hasAttribute](#hasAttribute)
+- [hasClass](#hasClass)
+- [hasStyle](#hasStyle)
+- [hasProp](#hasProp)
+- [html](#html)
+- [is](#is)
+- [isEmpty](#isEmpty)
+- [isVueInstance](#isVueInstance)
+- [name](#name)
+- [setData](#setData)
+- [setProps](#setProps)
+- [text](#text)
+- [update](#update)
+
+
+
 ### contains(selector)
 Returns true if wrapper contains selector
 
@@ -14,7 +36,7 @@ wrapper.contains('div')
 ### destroy()
 Calls $destroy on vms
 
-**comments** - maybe unneeded. Same could be achieved with `wrapper.vm.$destory`
+**comments** - maybe not needed. Same could be achieved with `wrapper.vm.$destory`
 
 **example**
 ```js
