@@ -23,11 +23,11 @@
   * [text](#text)
   * [update](#update)
   
-## mount
+## mount(Component, options)
 
 Mount component.
 
-#### Options `Object`
+#### options `Object`
 
 **attachToDocument** `Boolean` attach DOM to document. Default false
 **globals** - `Object` methods and properties to be added as globals
@@ -35,7 +35,9 @@ Mount component.
 **slots** - `Object`
 **slots.name** - `Array<Component>|Component`
 
-**example** 
+#### returns `Object` - Wrapper/ Vue Wrapper
+
+#### example
 ```js
 const wrapper = mount(Component, {
  globals: { $route: stub() }
@@ -47,11 +49,11 @@ const wrapper = mount(Component, {
 })
 ```
 
-## shallow
+## shallow(Component, options)
 
 Render component 1 level deeep, stub child components so they can still be tested.
 
-#### Options `Object`
+#### options `Object`
 
 **attachToDocument** `Boolean` attach DOM to document. Default false
 **globals** - `Object` methods and properties to be added as globals
@@ -59,7 +61,9 @@ Render component 1 level deeep, stub child components so they can still be teste
 **slots** - `Object`
 **slots.name** - `Array<Component>|Component`
 
-**example** 
+#### returns `Object` - Wrapper/ Vue Wrapper
+
+#### example
 ```js
 const wrapper = shallow(Component, {
  globals: { $route: stub() }
