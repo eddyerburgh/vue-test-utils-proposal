@@ -30,9 +30,13 @@ Mount component.
 #### options `Object`
 
 **attachToDocument** `Boolean` attach DOM to document. Default false
+
 **globals** - `Object` methods and properties to be added as globals
+
 **props** - `Object`
+
 **slots** - `Object`
+
 **slots.name** - `Array<Component>|Component`
 
 #### returns `Object` - Wrapper/ Vue Wrapper
@@ -56,9 +60,13 @@ Render component 1 level deeep, stub child components so they can still be teste
 #### options `Object`
 
 **attachToDocument** `Boolean` attach DOM to document. Default false
+
 **globals** - `Object` methods and properties to be added as globals
+
 **props** - `Object`
+
 **slots** - `Object`
+
 **slots.name** - `Array<Component>|Component`
 
 #### returns `Object` - Wrapper/ Vue Wrapper
