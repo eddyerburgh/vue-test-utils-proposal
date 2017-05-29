@@ -1,4 +1,8 @@
-contains()
+## wrapper API
+
+#### contains(Selector)
+Selector - CSS selector or Vue component
+returns - boolean
 ```js
 wrapper.contains('div') // returns boolean
 ```
