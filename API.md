@@ -6,7 +6,6 @@
 - [wrapper](#wrapper)
   * [contains](#containsselector)
   * [destroy](#destroy)
-  * [dispatch](#dispatchevent)
   * [didEmit](#didemit)
   * [find](#findselector)
   * [hasAttribute](#hasattributeattribute)
@@ -21,6 +20,7 @@
   * [setData](#setdatadata)
   * [setProps](#setpropsprops)
   * [text](#text)
+  * [trigger](#triggerevent) 
   * [update](#update)
 
 ## mount(Component, options)
@@ -109,17 +109,6 @@ Calls $destroy on vms
 **example**
 ```js
 wrapper.destroy()
-```
-### dispatch(event)
-Dispatches native event or custom event to wrapper elements or vms
-
-**event** - `String` name of event to be dispatched/emitted
-
-**comments** - should this be broken into two methods - dispatch and emit?
-
-**example**
-```js
-wrapper.dispatch('click')
 ```
 ### didEmit()
 Asserts wrapper vm emitted event
@@ -263,6 +252,17 @@ Returns all text node content of vNode tree concatted to string
 **example**
 ```js
 wrapper.text()
+```
+### trigger(event)
+Dispatches native event or custom event to wrapper elements or vms
+
+**event** - `String` name of event to be dispatched/emitted
+
+**comments** - should this be broken into two methods - trigger and emit?
+
+**example**
+```js
+wrapper.trigger('click')
 ```
 ### update()
 Forces vm to re render
