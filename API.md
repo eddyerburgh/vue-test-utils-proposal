@@ -1,6 +1,6 @@
 ## wrapper API
 
-#### contains(selector)
+### contains(selector)
 **selector** - CSS selector or Vue component
 
 **returns** - boolean
