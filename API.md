@@ -1,8 +1,8 @@
 # API
 
 ### methods
-- [mount](#mount)
-- [shallow](#shallow)
+- [mount](#mountcomponent-options)
+- [shallow](#shallowcomponent-options)
 - [wrapper](#wrapper)
   * [contains](#contains)
   * [destroy](#destroy)
