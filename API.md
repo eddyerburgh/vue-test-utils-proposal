@@ -55,11 +55,13 @@ const wrapper = mount(Component, {
 
 ## shallow(Component, options)
 
-Render component 1 level deeep, stub child components so they can still be tested.
+Render component n level deeep, defaults to 1. stub child components so they can still be tested.
 
 #### options `Object`
 
 **attachToDocument** `Boolean` attach DOM to document. Default false
+
+**depth** - `Number` - number of levels to render
 
 **globals** - `Object` methods and properties to be added as globals
 
