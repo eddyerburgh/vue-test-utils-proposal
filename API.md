@@ -1,6 +1,8 @@
 # API
 
 ### methods
+- [mount](#mount)
+- [shallow](#shallow)
 - [wrapper](#wrapper)
   * [contains](#contains)
   * [destroy](#destroy)
@@ -20,6 +22,54 @@
   * [setProps](#setProps)
   * [text](#text)
   * [update](#update)
+  
+## mount
+
+Mount component.
+
+#### Options `Object`
+
+**attachToDocument** `Boolean` attach DOM to document. Default false
+**globals** - `Object` methods and properties to be added as globals
+**props** - `Object`
+**slots** - `Object`
+**slots.name** - `Array<Component>|Component`
+
+**example** 
+```js
+const wrapper = mount(Component, {
+ globals: { $route: stub() }
+ props: { myProp: 'my prop' },
+ slots: {
+  default: [AnotherComponent],
+  header: HeaderComponent
+ }
+})
+```
+
+## shallow
+
+Render component 1 level deeep, stub child components so they can still be tested.
+
+#### Options `Object`
+
+**attachToDocument** `Boolean` attach DOM to document. Default false
+**globals** - `Object` methods and properties to be added as globals
+**props** - `Object`
+**slots** - `Object`
+**slots.name** - `Array<Component>|Component`
+
+**example** 
+```js
+const wrapper = shallow(Component, {
+ globals: { $route: stub() }
+ props: { myProp: 'my prop' },
+ slots: {
+  default: [AnotherComponent],
+  header: HeaderComponent
+ }
+})
+```
 
 ## wrapper
 
