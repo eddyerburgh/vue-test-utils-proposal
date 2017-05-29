@@ -1,79 +1,103 @@
 ## wrapper API
 
 ### contains(selector)
-**selector** - CSS selector or Vue component
+Returns true if wrapper contains selector
 
-**returns** - boolean
+**selector** - `String|Object` CSS selector or Vue component
+
+**returns** - `Boolean`
 
 **example**
 ```js
 wrapper.contains('div') // returns boolean
 ```
-destroy()
+### destroy()
+Calls $destroy on vms
+
+**comments** - maybe unneeded. Same could be achieved with `wrapper.vm.$destory`
+
+**example**
 ```js
 wrapper.destroy() // calls destory on vm
 ```
-dispatch()
+### dispatch()
+Dispatches native event or custom event to wrapper elements or vms
+
+**comments** - should this be broken into two methods - dispatch and emit?
+
+**example**
 ```js
 wrapper.dispatch() // dispatches custom/browser event on wrapper vm/element
 ```
-didEmit()
+### didEmit()
+Asserts wrapper vm emitted event
+
+**returns** - `Boolean`
+
+**example**
 ```js
 wrapper.didEmit('update') // returns boolean
 ```
-find()
+### find(selector)
+Returns true if wrapper contains selector
+
+**selector** - `String|Object` CSS selector or Vue component
+
+**returns** - `Object` wrapper containing new elements
+
+**example**
 ```js
 wrapper.find() // returns wrappers/ container class
 ```
-hasAttribute()
+### hasAttribute()
 ```js
 wrapper.hasAttribute('attribute') // returns boolean
 ```
-hasClass()
+### hasClass()
 ```js
 wrapper.hasClass('class') // returns boolean
 ```
-hasStyle()
+### hasStyle()
 ```js
 wrapper.hasProp('style') // returns boolean
 ```
-hasProp()
+### hasProp()
 ```js
 wrapper.hasProp('prop') // returns boolean
 ```
-html()
+### html()
 ```js
 wrapper.html() // returns HTML of wrapper DOM node as a string
 ```
-is()
+### is()
 ```js
 wrapper.is('div') // returns boolean
 ```
-isEmpty()
+### isEmpty()
 ```js
 wrapper.isEmpty() // returns true if no child nodes
 ```
-isVueComponent()
+### isVueComponent()
 ```js
 wrapper.isVueComponent() // returns boolean
 ```
-name()
+### name()
 ```js
 wrapper.name() // returns component name if node is a Vue component, or tag name if native DOM node
 ```
-setData()
+### setData()
 ```js
 wrapper.setData({data: 'value'})
 ```
-setProps()
+### setProps()
 ```js
 wrapper.setProps({prop: 'value'})
 ```
-text()
+### text()
 ```js
 wrapper.text() // returns text content of wrapper
 ```
-update()
+### update()
 ```js
 wrapper.update() // forces re render
 ```
