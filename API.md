@@ -139,10 +139,11 @@ Returns true if wrapper contains selector
 ```js
 wrapper.find()
 ```
-### hasAttribute(attribute)
-Returns true if wrapper DOM elements have attribute
+### hasAttribute(attribute, value?)
+Returns true if wrapper DOM elements have attribute. If value is specified, checke the value of the attribute matches.
 
 **attribute** - `String`
+**value** (optional) - `String`
 
 **returns** - `Boolean`
 
