@@ -119,7 +119,7 @@ Dispatches native event or custom event to wrapper elements or vms
 
 **example**
 ```js
-wrapper.dispatch()
+wrapper.dispatch('click')
 ```
 ### didEmit()
 Asserts wrapper vm emitted event
