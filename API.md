@@ -9,7 +9,7 @@ Returns true if wrapper contains selector
 
 **example**
 ```js
-wrapper.contains('div') // returns boolean
+wrapper.contains('div')
 ```
 ### destroy()
 Calls $destroy on vms
@@ -18,7 +18,7 @@ Calls $destroy on vms
 
 **example**
 ```js
-wrapper.destroy() // calls destory on vm
+wrapper.destroy()
 ```
 ### dispatch()
 Dispatches native event or custom event to wrapper elements or vms
@@ -27,7 +27,7 @@ Dispatches native event or custom event to wrapper elements or vms
 
 **example**
 ```js
-wrapper.dispatch() // dispatches custom/browser event on wrapper vm/element
+wrapper.dispatch()
 ```
 ### didEmit()
 Asserts wrapper vm emitted event
@@ -36,7 +36,7 @@ Asserts wrapper vm emitted event
 
 **example**
 ```js
-wrapper.didEmit('update') // returns boolean
+wrapper.didEmit('update')
 ```
 ### find(selector)
 Returns true if wrapper contains selector
@@ -47,57 +47,133 @@ Returns true if wrapper contains selector
 
 **example**
 ```js
-wrapper.find() // returns wrappers/ container class
+wrapper.find()
 ```
-### hasAttribute()
+### hasAttribute(attribute)
+Returns true if wrapper DOM elements have attribute
+
+**attribute** - `String`
+
+**returns** - `Boolean`
+
+**example**
 ```js
-wrapper.hasAttribute('attribute') // returns boolean
+wrapper.hasAttribute('attribute')
 ```
-### hasClass()
+### hasClass(class)
+Returns true if wrapper DOM elements have class
+
+**class** - `String`
+
+**returns** - `Boolean`
+
+**example**
 ```js
-wrapper.hasClass('class') // returns boolean
+wrapper.hasClass('class')
 ```
-### hasStyle()
+### hasStyle(style)
+Returns true if wrapper DOM elements have style
+
+**style** - `String`
+
+**returns** - `Boolean`
+
+**example**
 ```js
-wrapper.hasProp('style') // returns boolean
+wrapper.hasProp('style')
 ```
-### hasProp()
+### hasProp(prop)
+Returns true if wrapper vm have prop
+
+**prop** - `String`
+
+**returns** - `Boolean`
+
+**example**
 ```js
-wrapper.hasProp('prop') // returns boolean
+wrapper.hasProp('prop')
 ```
 ### html()
+Renders HTML of wrapper elements
+
+**returns** - `String` HTML of wrapper DOM node as a string
+
+**example**
 ```js
-wrapper.html() // returns HTML of wrapper DOM node as a string
+wrapper.html()
 ```
-### is()
+### is(selector)
+Asserts root wrapper nodes match selector
+
+**returns** - `Boolean`
+
+**example**
 ```js
-wrapper.is('div') // returns boolean
+wrapper.is('div')
 ```
 ### isEmpty()
+Asserts root wrapper node contains no children
+
+**returns** - `Boolean`
+
+**example**
 ```js
-wrapper.isEmpty() // returns true if no child nodes
+wrapper.isEmpty()
 ```
-### isVueComponent()
+
+### isVueInstance()
+Asserts root wrapper node is vm
+
+**returns** - `Boolean`
+
+**example**
 ```js
-wrapper.isVueComponent() // returns boolean
+wrapper.isVueComponent()
 ```
 ### name()
+Returns name of vm or tag name of vNode
+
+**returns** - `String` - name of component if vm, name of tag if vNode
+
+**example**
 ```js
-wrapper.name() // returns component name if node is a Vue component, or tag name if native DOM node
+wrapper.name()
 ```
-### setData()
+
+### setData(data)
+Sets vm data and re renders
+
+**comments** - should it re render, or should it be left to user?
+
+**data** - `Object` - data to set
+
+**example**
 ```js
 wrapper.setData({data: 'value'})
 ```
-### setProps()
+### setProps(props)
+Sets vm props and re renders
+
+**comments** - should it re render, or should it be left to user?
+
+**props** - `Object` - props to set
+
+**example**
 ```js
 wrapper.setProps({prop: 'value'})
 ```
 ### text()
+Returns all text node content of vNode tree concatted to string
+
+**returns** - `String` - content of all text nodes
+
+**example**
 ```js
-wrapper.text() // returns text content of wrapper
+wrapper.text()
 ```
 ### update()
+Forces vm to re render
+**example**
 ```js
-wrapper.update() // forces re render
+wrapper.update()
 ```
