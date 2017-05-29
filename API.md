@@ -22,7 +22,7 @@
   * [setProps](#setProps)
   * [text](#text)
   * [update](#update)
-  
+
 ## mount(Component, options)
 
 Mount component.
@@ -32,6 +32,8 @@ Mount component.
 **attachToDocument** `Boolean` attach DOM to document. Default false
 
 **globals** - `Object` methods and properties to be added as globals
+
+**provide** - `Object` properties to [inject](https://vuejs.org/v2/api/#provide-inject) into component
 
 **props** - `Object`
 
@@ -46,6 +48,7 @@ Mount component.
 const wrapper = mount(Component, {
  globals: { $route: stub() }
  props: { myProp: 'my prop' },
+ provide: { anotherProp: 'access via `inject`' },
  slots: {
   default: [AnotherComponent],
   header: HeaderComponent
