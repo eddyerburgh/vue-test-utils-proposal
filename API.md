@@ -1,26 +1,27 @@
-## wrapper API
+# API
 
 ### methods
-- [contains](#contains)
-- [destroy](#destroy)
-- [dispatch](#dispatch)
-- [didEmit](#didEmit)
-- [find](#find)
-- [hasAttribute](#hasAttribute)
-- [hasClass](#hasClass)
-- [hasStyle](#hasStyle)
-- [hasProp](#hasProp)
-- [html](#html)
-- [is](#is)
-- [isEmpty](#isEmpty)
-- [isVueInstance](#isVueInstance)
-- [name](#name)
-- [setData](#setData)
-- [setProps](#setProps)
-- [text](#text)
-- [update](#update)
+- [wrapper](#wrapper)
+  * [contains](#contains)
+  * [destroy](#destroy)
+  * [dispatch](#dispatch)
+  * [didEmit](#didEmit)
+  * [find](#find)
+  * [hasAttribute](#hasAttribute)
+  * [hasClass](#hasClass)
+  * [hasStyle](#hasStyle)
+  * [hasProp](#hasProp)
+  * [html](#html)
+  * [is](#is)
+  * [isEmpty](#isEmpty)
+  * [isVueInstance](#isVueInstance)
+  * [name](#name)
+  * [setData](#setData)
+  * [setProps](#setProps)
+  * [text](#text)
+  * [update](#update)
 
-
+## wrapper
 
 ### contains(selector)
 Returns true if wrapper contains selector
