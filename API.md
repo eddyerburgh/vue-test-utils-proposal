@@ -31,6 +31,8 @@ Mount component.
 
 **attachToDocument** `Boolean` attach DOM to document. Default false
 
+**components** - `Array<String>` - name of components to replace with stubs
+
 **globals** - `Object` methods and properties to be added as globals
 
 **provide** - `Object` properties to [inject](https://vuejs.org/v2/api/#provide-inject) into component
@@ -39,13 +41,14 @@ Mount component.
 
 **slots** - `Object`
 
-**slots.name** - `Array<Component>|Component`
+**slots.name** - `Array<Component>|Component|String`
 
 #### returns `Object` - Wrapper/ Vue Wrapper
 
 #### example
 ```js
 const wrapper = mount(Component, {
+ components: ['foo', 'bar'],
  globals: { $route: stub() }
  props: { myProp: 'my prop' },
  provide: { anotherProp: 'access via `inject`' },
@@ -62,7 +65,7 @@ Render component n level deeep, defaults to 1. stub child components so they can
 
 #### options `Object`
 
-**attachToDocument** `Boolean` attach DOM to document. Default false
+**components** - `Array<String>` - name of components to replace with stubs
 
 **depth** - `Number` - number of levels to render
 
@@ -72,13 +75,14 @@ Render component n level deeep, defaults to 1. stub child components so they can
 
 **slots** - `Object`
 
-**slots.name** - `Array<Component>|Component`
+**slots.name** - `Array<Component>|Component|String`
 
 #### returns `Object` - Wrapper/ Vue Wrapper
 
 #### example
 ```js
 const wrapper = shallow(Component, {
+ components: ['foo', 'bar'],
  globals: { $route: stub() }
  props: { myProp: 'my prop' },
  slots: {
